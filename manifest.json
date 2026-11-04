@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "FxTwitter Share (FxEmbed)",
+  "version": "1.1.0",
+  "description": "X (Twitter) の共有メニューに「fxtwitterで共有」を追加し、fixupx.com (/ja) のURLをコピーします。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.x.com/*",
+        "https://mobile.twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ]
+}
